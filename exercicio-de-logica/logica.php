@@ -2,9 +2,10 @@
 
 $array = [50, 1, 5, 65, 35, 22, 100, 300, 250];
 
-/* Usando o sort */
+/* Usando o sort() */
 ordenarCrescenteSort($array);
 
+/* sem o uso do sort() */
 ordenarCrescente($array);
 
 /**
