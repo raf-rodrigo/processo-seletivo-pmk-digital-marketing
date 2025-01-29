@@ -11,8 +11,8 @@
     <title>PMK - Digital Marketing</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+    <div class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
         <div class="container justify-content-start">
             <img src="../public/assets/logo.jpeg" alt="Logo da PMK Digitl Marketing" width="100" />
         </div>
-    </nav>
+    </div>
