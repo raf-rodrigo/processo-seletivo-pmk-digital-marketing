@@ -9,7 +9,7 @@ CREATE TABLE dados_doacao(
     agencia CHAR(6) DEFAULT NULL,
     conta CHAR(14) DEFAULT NULL,
     bandeira_cartao VARCHAR(20) NOT NULL,
-    seis_primeiros_digitos CHAR(6) NULL UNIQUE ,
-    quatros_ultimos_digitos CHAR(4) NULL UNIQUE ,
+    seis_primeiros_digitos CHAR(6) NULL ,
+    quatros_ultimos_digitos CHAR(4) NULL ,
     FOREIGN KEY (doador_id) REFERENCES doadores(id)
 );
