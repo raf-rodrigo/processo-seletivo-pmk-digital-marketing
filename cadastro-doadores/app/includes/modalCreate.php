@@ -91,10 +91,10 @@ t
                     </div>
                     <div class="row my-2">
                         <div class="form-group col">
-                            <input type="text" id="bandeira_cartao" name="bandeira_cartao" class="form-control" placeholder="" required/>
+                            <input type="text" id="bandeira_cartao" name="bandeira_cartao" class="form-control" placeholder="Bandeira Cartão" required/>
                         </div>
                         <div class="form-group col">
-                            <input type="text" id="numero_cartao" name="numero_cartao" class="form-control" placeholder="" required/>
+                            <input type="text" id="numero_cartao" name="numero_cartao" class="form-control" placeholder="Número Cartão" required/>
                         </div>
                     </div>
                 </div>
