@@ -20,6 +20,9 @@ $dados = Controller::index();
             </div>
         <? else: ?>
             <div class="w-100">
+                <table>
+                    
+                </table>
 
             </div>
         <? endif ?>
