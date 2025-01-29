@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    container_name: php_app
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - "8001:80"  # Mapeando a porta 8001 do host para a porta 80 do Apache
+    entrypoint: ["sh", "-c", "chmod -R 755 /var/www/html && apache2-foreground"]
+    depends_on:
+      - mysql
+    networks:
+      - app_network
+
+  mysql:
+    image: mysql:8
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: cadastro_doador
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    networks:
+      - app_network
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  app_network:
+    driver: bridge
