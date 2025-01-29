@@ -21,9 +21,19 @@ $dados = Controller::index();
         <? else: ?>
             <div class="w-100">
                 <table>
-                    
+                    <thead>
+                        <tr>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <? foreach ($dados as $dado): ?>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <? endforeach ?>
                 </table>
-
             </div>
         <? endif ?>
 
