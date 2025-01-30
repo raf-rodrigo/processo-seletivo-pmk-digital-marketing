@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Dados da doação
     $dadosDoacao = [
         'intervalo_doacao' => $_POST['intervalo_doacao'],
-        'valor_doacao' => $_POST['valor_doacao'],
+        'valor_doacao' => str_replace(',', '.', str_replace('.', '', $_POST['valor_doacao'])),
         'forma_pagamento' => $_POST['forma_pagamento'],
         'banco' => !empty($_POST['banco']) ? $_POST['banco'] : null, // Define como NULL se estiver vazio
         'agencia' => !empty($_POST['agencia']) ? $_POST['agencia'] : null,

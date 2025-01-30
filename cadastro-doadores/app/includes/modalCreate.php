@@ -94,7 +94,7 @@
                         </div>
                     </div>
 
-                    <div class="row my-2">
+                    <div class="row my-2" id="dados_credito" style="display: none">
                         <div class="form-group col">
                             <input type="text" id="bandeira_cartao" name="bandeira_cartao" class="form-control" placeholder="Bandeira Cartão" />
                         </div>
@@ -111,6 +111,36 @@
         </div>
     </div>
 </div>
+<script>
 
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const formaPagamentoRadioButtons = document.querySelectorAll('input[name="forma_pagamento"]');
+        const dadosBancarios = document.getElementById('dados_bancarios');
+        const dadosCredito = document.getElementById('dados_credito');
+
+
+        function toggleCampos() {
+            if (document.getElementById('debito').checked) {
+                dadosBancarios.style.display = 'block';
+                dadosCredito.style.display = 'none';
+            } else if (document.getElementById('credito').checked) {
+                dadosBancarios.style.display = 'none';
+                dadosCredito.style.display = 'block';
+            } else {
+                dadosBancarios.style.display = 'none';
+                dadosCredito.style.display = 'none';
+            }
+        }
+
+
+        formaPagamentoRadioButtons.forEach(radio => {
+            radio.addEventListener('change', toggleCampos);
+        });
+
+
+        toggleCampos();
+    });
+</script>
 <?php
 require_once __DIR__ . '/footer.php';

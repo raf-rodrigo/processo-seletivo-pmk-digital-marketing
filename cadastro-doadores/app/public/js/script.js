@@ -1,25 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const formaPagamentoRadioButtons = document.getElementsByName('forma_pagamento');
-    const dadosBancarios = document.getElementById('dados_bancarios');
-
-    // Função para exibir ou ocultar os campos bancários
-    function toggleDadosBancarios() {
-        if (document.getElementById('debito').checked) {
-            dadosBancarios.style.display = 'block';  // Exibe os campos
-        } else {
-            dadosBancarios.style.display = 'none';   // Oculta os campos
-        }
-    }
-
-    // Adiciona event listeners para os radio buttons
-    formaPagamentoRadioButtons.forEach(radio => {
-        radio.addEventListener('change', toggleDadosBancarios);
-    });
-
-    // Chama a função para verificar o estado inicial
-    toggleDadosBancarios();
-});
-
 function openConfirmationModal(id) {
     document.getElementById('recordId').value = id;
     document.getElementById('confirmationModal').style.display = 'block';

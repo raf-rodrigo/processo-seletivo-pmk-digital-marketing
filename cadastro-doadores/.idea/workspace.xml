@@ -5,38 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44f5ff97-9bce-429d-a9b2-f0a360d494f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/deletarDoador.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/public/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/updateDoador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b5b49918-2a3f-4377-9302-bb155ab832c5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b5b49918-2a3f-4377-9302-bb155ab832c5/storage_v2/_src_/schema/github.4xvBtQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b5b49918-2a3f-4377-9302-bb155ab832c5/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b5b49918-2a3f-4377-9302-bb155ab832c5/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b5b49918-2a3f-4377-9302-bb155ab832c5/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b5b49918-2a3f-4377-9302-bb155ab832c5/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c6eb710a-32a9-487a-a725-f9e28419e0f6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c6eb710a-32a9-487a-a725-f9e28419e0f6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75bbd8e-d699-4cad-986e-a400230696d3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75bbd8e-d699-4cad-986e-a400230696d3/storage_v2/_src_/schema/github.4xvBtQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75bbd8e-d699-4cad-986e-a400230696d3/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75bbd8e-d699-4cad-986e-a400230696d3/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75bbd8e-d699-4cad-986e-a400230696d3/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75bbd8e-d699-4cad-986e-a400230696d3/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/conexao/Conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/conexao/Conexao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/createDoador.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/createDoador.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/includes/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/includes/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/includes/modalCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/includes/modalCreate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/create_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/create_database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/create_table_dados_doacao.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/create_table_dados_doacao.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/create_table_doadores.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/create_table_doadores.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/DadosDoacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/DadosDoacao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Doador.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Doador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/assets/logo.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/assets/logo.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/assets/logo.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/assets/logo.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +157,7 @@
       <workItem from="1738113994867" duration="2720000" />
       <workItem from="1738120401803" duration="2674000" />
       <workItem from="1738127672428" duration="8355000" />
-      <workItem from="1738187662581" duration="20930000" />
+      <workItem from="1738187662581" duration="24195000" />
     </task>
     <servers />
   </component>
