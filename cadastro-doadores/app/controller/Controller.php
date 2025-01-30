@@ -39,54 +39,25 @@ class Controller
         }
     }
 
-    public static function show()
-    {
-        try {
+    public static function show($id) {
+        $pdo = Conexao::getConexao();
 
-            $pdo = Conexao::getConexao();
+        $sql = "SELECT 
+                    d.id AS doador_id, d.nome, d.email, d.cpf, d.telefone, 
+                    d.data_nascimento, d.data_cadastro, d.cep, d.logradouro, 
+                    d.numero, d.complemento, d.bairro, d.cidade, d.estado,
+                    dd.id AS doacao_id, dd.intervalo_doacao, dd.valor_doacao, 
+                    dd.forma_pagamento, dd.banco, dd.agencia, dd.conta, 
+                    dd.bandeira_cartao, dd.cartao, dd.seis_primeiros_digitos, 
+                    dd.quatros_ultimos_digitos
+                FROM doadores d
+                LEFT JOIN dados_doacao dd ON d.id = dd.doador_id
+                WHERE d.id = :id";
 
-            $sql = "
-                SELECT 
-                    doadores.id AS doador_id,
-                    doadores.nome AS doador_nome,
-                    doadores.email AS doador_email,
-                    doadores.cpf AS doador_cpf,
-                    doadores.telefone AS doador_telefone,
-                    doadores.data_nascimento AS doador_data_nascimento,
-                    doadores.data_cadastro AS doador_data_cadastro,
-                    doadores.cep AS doador_cep,
-                    doadores.logradouro AS doador_logradouro,
-                    doadores.numero AS doador_numero,
-                    doadores.complemento AS doador_complemento,
-                    doadores.bairro AS doador_bairro,
-                    doadores.cidade AS doador_cidade,
-                    doadores.estado AS doador_estado,
-                    dados_doacao.id AS doacao_id,
-                    dados_doacao.intervalo_doacao AS doacao_intervalo,
-                    dados_doacao.valor_doacao AS doacao_valor,
-                    dados_doacao.forma_pagamento AS doacao_forma_pagamento,
-                    dados_doacao.banco AS doacao_banco,
-                    dados_doacao.agencia AS doacao_agencia,
-                    dados_doacao.conta AS doacao_conta,
-                    dados_doacao.bandeira_cartao AS doacao_bandeira,
-                    dados_doacao.cartao AS doacao_cartao,
-                    dados_doacao.seis_primeiros_digitos AS doacao_seis_digitos,
-                    dados_doacao.quatros_ultimos_digitos AS doacao_quatro_digitos
-                FROM 
-                    doadores
-                LEFT JOIN 
-                    dados_doacao 
-                ON 
-                    doadores.id = dados_doacao.doador_id;
-            ";
-
-            $stmt = $pdo->query($sql);
-
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        } catch (PDOException $e) {
-            die("Erro ao executar a consulta: " . $e->getMessage());
-        }
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public static function update($id, $dadosDoador, $dadosDoacao)

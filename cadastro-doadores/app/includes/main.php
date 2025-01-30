@@ -43,9 +43,16 @@ $dados = Controller::index();
                             <td><?=$dado['forma_doacao']?></td>
                             <td>
                                 <div>
-                                    <a href="#"><span title="Editar Registro"><img src="../public/assets/icon/edit.svg" width="20" height="20"/></span></a>
-                                    <button class="btn btn-link" onclick="openConfirmationModal(<?=$dado['id'] ?>)"><span title="Excluir Registro">
-                                            <img src="../public/assets/icon/trash.svg" width="20" height="20"/></span></button>
+                                    <button class="btn btn-link" id="editDoadorButton" data-id="<?=$dado['id']?>">
+                                        <span title="Editar Registro">
+                                            <img src="../public/assets/icon/edit.svg" width="20" height="20"/>
+                                        </span>
+                                    </button>
+                                    <button class="btn btn-link" onclick="openConfirmationModal(<?=$dado['id'] ?>)">
+                                        <span title="Excluir Registro">
+                                            <img src="../public/assets/icon/trash.svg" width="20" height="20"/>
+                                        </span>
+                                    </button>
                                 </div>
                             </td>
                         </tr>
@@ -80,7 +87,35 @@ $dados = Controller::index();
 </div>
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecionar todos os botões de edição
+            const buttons = document.querySelectorAll('button[id="editDoadorButton"]');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = button.getAttribute('data-id');  // Pega o id do doador a partir do data-id
+                    openEditModal(id);
+                });
+            });
+        });
+
+        function openEditModal(button) {
+            var id = button.getAttribute("data-id");
+
+            console.log("Abrindo modal para o doador com ID:", id);
+            alert("Abrindo modal para o doador com ID: " + id);
+
+            // Verifica se o modal do Bootstrap está carregado
+            var modal = new bootstrap.Modal(document.getElementById('createDoadorModal'));
+            modal.show();
+        }
+
+    </script>
+
+
 
 <?php
-include('modalCreate.php');
+include_once ('modalCreate.php');
+include_once ('modalUpdate.php');
 ?>
